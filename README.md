@@ -20,3 +20,5 @@ AMG 계기판의 분위기만 재해석한 독자 디자인의 아날로그+디�
 Android Studio에서 이 폴더를 연 뒤 JDK 17과 Android SDK 35를 설치하고 `Build > Generate App Bundles or APKs > Generate APKs`를 실행합니다. 결과는 `app/build/outputs/apk/debug/app-debug.apk`입니다.
 
 현재 포함된 리소스는 450×450 원형 화면용이며 Watch4 Classic 42mm/46mm 모두 같은 해상도에 맞습니다.
+
+자동 APK 빌드는 GitHub Actions에서 실행됩니다.
