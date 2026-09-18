@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450">
+    <Metadata key="CLOCK_TYPE" value="ANALOG" />
+    <Metadata key="PREVIEW_TIME" value="10:08:32" />
+    <Metadata key="STEP_COUNT" value="6842" />
+    <Scene backgroundColor="#000000">
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="preview" />
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+        </PartImage>
+        <DigitalClock x="105" y="68" width="240" height="60">
+            <TimeText x="0" y="0" width="240" height="60" format="HH:mm">
+                <Font family="SYNC_TO_DEVICE" size="42" color="#FFFFFF" />
+            </TimeText>
+        </DigitalClock>
+        <PartText x="125" y="126" width="200" height="28">
+            <Text align="CENTER" ellipsis="FALSE">
+                <Font family="SYNC_TO_DEVICE" size="18" color="#CFCFCF">
+                    <Template><![CDATA[%02d.%02d  %s]]><Parameter expression="[MONTH]" /><Parameter expression="[DAY]" /><Parameter expression="[DAY_OF_WEEK_S]" /></Template>
+                </Font>
+            </Text>
+        </PartText>
+        <PartText x="72" y="202" width="110" height="54">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Text align="CENTER" ellipsis="FALSE">
+                <Font family="SYNC_TO_DEVICE" size="18" color="#FFFFFF">
+                    <Template><![CDATA[STEP  %05d]]><Parameter expression="[STEP_COUNT]" /></Template>
+                </Font>
+            </Text>
+        </PartText>
+        <PartText x="268" y="202" width="110" height="54">
+            <Text align="CENTER" ellipsis="FALSE">
+                <Font family="SYNC_TO_DEVICE" size="18" color="#FFFFFF">
+                    <Template><![CDATA[BATT  %02d%%]]><Parameter expression="[BATTERY_PERCENT]" /></Template>
+                </Font>
+            </Text>
+        </PartText>
+
+        <!-- Assign these eight editable slots in Galaxy Wearable to Phone,
+             Messages, Camera Controller, Samsung Health, Timer/Alarm,
+             Weather, Music and Maps. -->
+        <ComplicationSlot slotId="1" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="196" y="14" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="11" color="#FF5260"><![CDATA[PHONE]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="2" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="302" y="48" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FF5260"><![CDATA[MSG]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="3" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="370" y="142" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FF5260"><![CDATA[CAM]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="4" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="370" y="250" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#FF5260"><![CDATA[HEALTH]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="5" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="302" y="344" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#FF5260"><![CDATA[TIMER]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="6" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="90" y="344" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="8" color="#FF5260"><![CDATA[WEATHER]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="7" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="22" y="250" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#FF5260"><![CDATA[MUSIC]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+        <ComplicationSlot slotId="8" supportedTypes="SHORT_TEXT SMALL_IMAGE EMPTY" x="22" y="142" width="58" height="58">
+            <BoundingOval x="0" y="0" width="58" height="58" />
+            <Complication type="SHORT_TEXT"><PartText x="0" y="7" width="58" height="44"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="12" color="#FFFFFF"><Template><![CDATA[%s]]><Parameter expression="[COMPLICATION.TEXT]" /></Template></Font></Text></PartText></Complication>
+            <Complication type="SMALL_IMAGE"><PartImage x="9" y="9" width="40" height="40"><Image resource="[COMPLICATION.SMALL_IMAGE]" /></PartImage></Complication>
+            <Complication type="EMPTY"><PartText x="0" y="15" width="58" height="28"><Text align="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FF5260"><![CDATA[MAP]]></Font></Text></PartText></Complication>
+        </ComplicationSlot>
+
+        <PartText x="100" y="405" width="250" height="25">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Text align="CENTER" ellipsis="FALSE"><Font family="SYNC_TO_DEVICE" size="14" color="#FF5260"><![CDATA[DD CUSTOM · PERFORMANCE]]></Font></Text>
+        </PartText>
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand resource="hour" x="215" y="50" width="20" height="190" pivotX="0.5" pivotY="0.921" />
+            <MinuteHand resource="minute" x="217" y="25" width="16" height="220" pivotX="0.5" pivotY="0.9" />
+            <SecondHand resource="second" x="221" y="15" width="8" height="245" pivotX="0.5" pivotY="0.857">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Sweep frequency="15" />
+            </SecondHand>
+        </AnalogClock>
+    </Scene>
+</WatchFace>
